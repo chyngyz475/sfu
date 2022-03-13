@@ -3828,7 +3828,6 @@ h3 {
 /* line 100, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_event.scss */
 
 .event_details_area .single_event .thumb .date {
-    position: absolute;
     left: 0;
     bottom: 0;
     background: #317bd6;
