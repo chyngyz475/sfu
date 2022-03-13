@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from student import views
+from  .import views
  
 urlpatterns = [
-    path('', views.index),
+    path('<slug:slug>/', views.PostListView.as_view(), name="post_list"),
+    path('', views.home),
 ]

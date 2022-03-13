@@ -1,15 +1,15 @@
+from django.views.generic import ListView
 import pdb
 from django.shortcuts import render
-from django.http import (
-    HttpResponse,
-    HttpRequest,
-    JsonResponse,
-)
-from django.views import View
 
- 
-def index(request):
+from news.models import Post
+
+
+class PostListView(ListView):
+    model = Post
     
-    return render(request, 'templates/index.html')
+    def get_queryset(self):
+        return Post.objects.filter(categore__slug=self.kwargs.get("slug"))
 
-
+def home(request):
+    return render(request, 'base.html')
