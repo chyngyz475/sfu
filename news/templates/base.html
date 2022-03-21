@@ -32,6 +32,7 @@
         <![endif]-->
 
     <!-- header-start -->
+    {%block content%}
     <header>
         <div class="header-area ">
             <div class="header-top_area">
@@ -58,7 +59,7 @@
                                 <div class="header_left">
                                     <div class="logo">
                                         <a href="index.html">
-                                            <img src="{% static 'img/logo.png' }" alt="">
+                                            <img src="{% static 'img/logo.png' %}" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -66,17 +67,17 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><a href="index.html">Домой</a></li>
-                                                <li><a href="Courses.html">Курсы</a></li>
-                                                <li><a href="single-blog.html">Новости </a>
+                                                <li><a href="/">Домой</a></li>
+                                                <li><a href="{% url 'courses' %}">Направление</a></li>
+                                                <li><a href="{% url 'single' %}">Новости </a>
                                                 </li>
                                                 <li><a href="#">Страницы<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
-                                                        <li><a href="event_details.html">События</a></li>
-                                                        <li><a href="Admissions.html">Приемы</a></li>
+                                                        <li><a href="{% url 'details' %}">События</a></li>
+                                                        <li><a href="{% url 'Admissions' %}">Приемы</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Контакты</a></li>
+                                                <li><a href="{% url 'contact' %}">Контакты</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -95,9 +96,10 @@
                 </div>
             </div>
         </div>
+
     </header>
+
     <!-- header-end -->
-    {% block content%}
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="slider_active owl-carousel">
@@ -132,7 +134,7 @@
             </div>
             <!--/ single_carouse -->
             <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="single_slider {% static 'img/banner/student1.jpg' %} d-flex align-items-center slider_bg_1">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
@@ -395,17 +397,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="single_input">
-                                            <input type="text" placeholder="First Name">
+                                            <input type="text" placeholder="Ф.И.О">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_input">
-                                            <input type="text" placeholder="Last Name">
+                                            <input type="text" placeholder="Направление">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_input">
-                                            <input type="text" placeholder="Phone Number">
+                                            <input type="text" placeholder="Контактный номер ">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -488,7 +490,6 @@
         </div>
     </div>
     <!-- recent_news_area_end  -->
-    {% endblock content%}
     <!-- footer start -->
     <footer class="footer">
         <div class="footer_top">
@@ -603,6 +604,7 @@
 
     </footer>
     <!-- footer end  -->
+    {%endblock%}
 
 
     <!-- JS here -->

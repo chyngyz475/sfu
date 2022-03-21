@@ -1001,7 +1001,7 @@ h3 {
     border: 1px solid #ddd;
     top: 3px;
     right: 5px;
-    top: -36px;
+    top: -60px;
 }
 
 
@@ -1048,7 +1048,7 @@ h3 {
     padding: 5px;
     right: 0;
     margin-top: -5px;
-    top: -29px;
+    top: -60px;
 }
 
 
@@ -1590,14 +1590,14 @@ h3 {
 /* line 1, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
 
 .slider_bg_1 {
-    background-image: url(../img/banner/student.jpg);
+    background-image: url('/static/img/banner/student.jpg');
 }
 
 
 /* line 4, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
 
 .slider_bg_2 {
-    background-image: url(../img/banner/student1.jpg);
+    background-image: url('/static/img/banner/student.jpg');
 }
 
 
@@ -3999,7 +3999,7 @@ h3 {
 
 .latest_coures_area::before {
     position: absolute;
-    background-image: url(../img/causes/1.png);
+    background-image: url('{{STATIC_URL}}img/causes/1.png');
     left: 0;
     content: '';
     width: 60%;
@@ -8267,3 +8267,6 @@ h6 {
 
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*# News block*/
