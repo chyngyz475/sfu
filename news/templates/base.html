@@ -32,7 +32,6 @@
         <![endif]-->
 
     <!-- header-start -->
-    {% block content %}
     <header>
         <div class="header-area ">
             <div class="header-top_area">
@@ -58,7 +57,7 @@
                             <div class="header_wrap d-flex justify-content-between align-items-center">
                                 <div class="header_left">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="/">
                                             <img src="{% static 'img/logo.png' %}" alt="">
                                         </a>
                                     </div>
@@ -83,7 +82,7 @@
                                     </div>
                                     <div class="Appointment">
                                         <div class="book_btn d-none d-lg-block">
-                                            <a data-scroll-nav='1' href="#">Оставить заявку</a>
+                                            <a data-scroll-nav='1' href="{% url 'admissions' %}">Оставить заявку</a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,6 +98,7 @@
 
     </header>
 
+    {% block content %}
     <!-- header-end -->
     <!-- slider_area_start -->
     <div class="slider_area">
@@ -111,7 +111,7 @@
                             <div class="slider_text ">
                                 <h3>Поступай правильно <br> поступай в СФУ! <br>
                                 </h3>
-                                <a href="#" class="boxed-btn3">Оставить заявку</a>
+                                <a href="{% url 'admissions' %}" class="boxed-btn3">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             <div class="slider_text ">
                                 <h3>Поступай правильно <br> поступай в СФУ! <br>
                                 </h3>
-                                <a href="#" class="boxed-btn3">Оставить заявку</a>
+                                <a href="{% url 'admissions' %}" class="boxed-btn3">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                             <div class="slider_text ">
                                 <h3>Поступай правильно <br> поступай в СФУ! <br>
                                 </h3>
-                                <a href="#" class="boxed-btn3">Оставить заявку</a>
+                                <a href="{% url 'admissions' %}" class="boxed-btn3">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -295,7 +295,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="course_all_btn text-center">
-                    <a href="Courses.html" class="boxed-btn4">Еще</a>
+                    <a href="{% url 'courses' %}" class="boxed-btn4">Еще</a>
                 </div>
             </div>
         </div>
@@ -349,10 +349,10 @@
                             <p>Март, 2022</p>
                         </div>
                         <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>Спортивный клуб СФУ зовёт всех На лыжи</h4>
+                            <a href="{% url 'details' %}">
+                                <h4>Первый Этап поступление Сфу В городе Бишкек</h4>
                             </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022 </span> <span> <i class="flaticon-placeholder"></i> Красноярск</span> </p>
+                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022 </span> <span> <i class="flaticon-placeholder"></i> Бишкек</span> </p>
                         </div>
                     </div>
                     <div class="single_event d-flex align-items-center">
@@ -361,10 +361,10 @@
                             <p>21Март, 2020</p>
                         </div>
                         <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>Спортивный клуб СФУ зовёт всех На лыжи</h4>
+                            <a href="{% url 'details' %}">
+                                <h4>Второй Этап поступление Сфу В городе Бишкек</h4>
                             </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022  </span> <span> <i class="flaticon-placeholder"></i> Красноярск</span> </p>
+                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022  </span> <span> <i class="flaticon-placeholder"></i> Бишкек</span> </p>
                         </div>
                     </div>
                     <div class="single_event d-flex align-items-center">
@@ -373,10 +373,10 @@
                             <p>Март, 2020</p>
                         </div>
                         <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>Спортивный клуб СФУ зовёт всех На лыжи</h4>
+                            <a href="{% url 'details' %}">
+                                <h4>Третий Этап поступление Сфу В городе Бишкек</h4>
                             </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022  </span> <span> <i class="flaticon-placeholder"></i> Красноярск</span> </p>
+                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i class="flaticon-calendar"></i> 21Март 2022  </span> <span> <i class="flaticon-placeholder"></i> Бишкек</span> </p>
                         </div>
                     </div>
                 </div>
@@ -451,13 +451,13 @@
                 <div class="col-md-6">
                     <div class="single__news">
                         <div class="thumb">
-                            <a href="single-blog.html">
+                            <a href="{% url 'single' %}">
                                 <img src="{% static 'img/news/1.png' %}" alt="">
                             </a>
                             <span class="badge">Новости</span>
                         </div>
                         <div class="news_info">
-                            <a href="single-blog.html">
+                            <a href="{% url 'single' %}">
                                 <h4>Эти другие расходы на обучение в колледже, о которых вы не думаете</h4>
                             </a>
                             <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> May 10, 2022</span>
@@ -470,13 +470,13 @@
                 <div class="col-md-6">
                     <div class="single__news">
                         <div class="thumb">
-                            <a href="single-blog.html">
+                            <a href="{% url 'single' %}">
                                 <img src="{% static 'img/news/2.png'%}" alt="">
                             </a>
                             <span class="badge bandge_2">Новости</span>
                         </div>
                         <div class="news_info">
-                            <a href="single-blog.html">
+                            <a href="{% url 'single' %}">
                                 <h4>Эти другие расходы на обучение в колледже, о которых вы не думаете</h4>
                             </a>
                             <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> Март 10, 2022</span>
@@ -489,6 +489,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
     <!-- recent_news_area_end  -->
     <!-- footer start -->
     <footer class="footer">
@@ -604,7 +605,7 @@
 
     </footer>
     <!-- footer end  -->
-    {% endblock %}
+
 
 
     <!-- JS here -->
