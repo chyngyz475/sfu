@@ -32,7 +32,7 @@
         <![endif]-->
 
     <!-- header-start -->
-    {%block content%}
+    {% block content %}
     <header>
         <div class="header-area ">
             <div class="header-top_area">
@@ -74,7 +74,7 @@
                                                 <li><a href="#">Страницы<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                         <li><a href="{% url 'details' %}">События</a></li>
-                                                        <li><a href="{% url 'Admissions' %}">Приемы</a></li>
+                                                        <li><a href="{% url 'admissions' %}">Приемы</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="{% url 'contact' %}">Контакты</a></li>
@@ -393,7 +393,7 @@
                     <div class="col-lg-7">
                         <div class="admission_form">
                             <h3>Подать заявку на поступление</h3>
-                            <form action="#">
+                            <form action="post" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="single_input">
@@ -604,7 +604,7 @@
 
     </footer>
     <!-- footer end  -->
-    {%endblock%}
+    {% endblock %}
 
 
     <!-- JS here -->

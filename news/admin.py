@@ -1,6 +1,6 @@
 from csv import list_dialects
 from django.contrib import admin
-from.models import News, Post, Comment,Tag
+from.models import News, Comment,Tag
 from .import models
 
 
@@ -11,7 +11,6 @@ class PostAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(models.News,)
-admin.site.register(models.Post)
 admin.site.register(models.Comment)
 admin.site.register(models.Tag)
 

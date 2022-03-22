@@ -26,12 +26,7 @@ class Tag(models.Model):
         return self.name
 
 
-class Post(models.Model):
-      author = models.ForeignKey(User, related_name="posts", on_delete=models.CASCADE)
-      title = models.CharField(max_length=200)
-      image = models.ImageField(upload_to='articles/')
-      text = models.TextField()
-      create_at = models.DateTimeField(auto_now_add=True)
+
       
 class Comment(models.Model):
        name = models.CharField(max_length=100)
@@ -39,11 +34,6 @@ class Comment(models.Model):
        email = models.CharField(max_length=150)
        contact = models.CharField(max_length=150, blank=True, null=True )
        message = models.TextField(max_length=500)
-       post = models.ForeignKey(
-             Post,
-             related_name="comment",
-             on_delete=models.CASCADE,
-             null=True,
-             blank=True
-       )
+
+
 

@@ -1,8 +1,7 @@
+
 from django.views.generic import ListView
 import pdb
 from django.shortcuts import render
-from django.http import HttpResponse
-from news.models import Post
 
 
 def home(request):
@@ -27,7 +26,7 @@ def admissions(request):
     return render(request, 'admissions.html')
 
 def application(request):
-    return render(request, "applecation.html", {})
+    return render(request, "aplication.html",)
 
 def details(request):
     return render(request, "details.html", {})

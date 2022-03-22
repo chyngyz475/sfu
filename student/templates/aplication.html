@@ -1,27 +1,27 @@
 {% extends "base.html" %} {%block content%}
-<div class="admission_area">
+<div data-scroll-index='1' class="admission_area">
     <div class="admission_inner">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-7">
                     <div class="admission_form">
-                        <h3>Apply for Admission</h3>
-                        <form action="post" method="post">
-                            {% csrf_token %} {{form}}
+                        <h3>Подать заявку на поступление</h3>
+                        <form action="{% url ' aplication_view' %}" method="POST">
+                            {% csrf_roken %}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="single_input">
-                                        <input type="text" placeholder="First Name">
+                                        <input type="text" placeholder="Ф.И.О">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="single_input">
-                                        <input type="text" placeholder="Last Name">
+                                        <input type="text" placeholder="Направление">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="single_input">
-                                        <input type="text" placeholder="Phone Number">
+                                        <input type="text" placeholder="Контактный номер ">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="apply_btn">
-                                        <button class="boxed-btn3" type="submit">Apply Now</button>
+                                        <button class="boxed-btn3" type="submit">Оправить заявку</button>
                                     </div>
                                 </div>
                             </div>
@@ -47,5 +47,4 @@
         </div>
     </div>
 </div>
-
 {%endblock%}
