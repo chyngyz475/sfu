@@ -10,8 +10,8 @@ def home(request):
 def courses(request):
     return render(request, 'courses.html')
 
-def contact(request):
-    return render(request, 'contact.html')
+def contact1(request):
+    return render(request, 'contact1.html')
 
 def single(request):
     return render(request, 'single.html')
@@ -23,6 +23,7 @@ def blog(request):
     return render(request, 'blog.html')
 
 def admissions(request):
+    
     return render(request, 'admissions.html')
 
 def application(request):

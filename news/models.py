@@ -34,6 +34,7 @@ class Comment(models.Model):
        email = models.CharField(max_length=150)
        contact = models.CharField(max_length=150, blank=True, null=True )
        message = models.TextField(max_length=500)
-
-
+       
+       def __str__(self):
+           return self.name
 

@@ -1,11 +1,10 @@
-from ast import pattern
-from django.conf.urls import *
-from django.conf import settings
-from  views import *
+from django.urls import path 
+from . import views 
+from django.contrib import admin
 
-urlpatterns = pattern('',
-    # Example:
-    (r'contact/$',contact),
-    (r'^thanks/$', thanks),
 
-)
+urlpatterns = [
+    # path('application', views.application,name='application'),
+    path("app", views.ContactCreateView.as_view(), name="application"),
+    path("thanks", views.thanks, name="thanks")
+]
