@@ -10,6 +10,9 @@ def home(request):
 def courses(request):
     return render(request, 'courses.html')
 
+def bachelor(request):
+    return render(request, 'bachelor.html')
+
 def contact1(request):
     return render(request, 'contact1.html')
 
@@ -30,4 +33,13 @@ def application(request):
     return render(request, "aplication.html",)
 
 def details(request):
-    return render(request, "details.html", {})
+    return render(request, "details.html",)
+
+def details_post(request):
+    return render(request=request, template_name='item/details_post.html')
+
+def details_post2(request):
+    return render(request=request, template_name='item/details_post2.html')
+
+def details_post3(request):
+    return render(request=request, template_name='item/details_post.html')

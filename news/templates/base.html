@@ -63,8 +63,13 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a href="/">Домой</a></li>
-                                                <li><a href="{% url 'courses' %}">Направление</a></li>
-                                                <li><a href="{% url 'single' %}">Новости </a>
+                                                <li><a href="{% url 'courses' %}">Направление<i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="{% url 'bachelor' %}">Направления подготовки бакалавров </a></li>
+                                                        <li><a href="{% url 'courses' %}">Популярные професиии Сфу</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'single' %}">Блог </a>
                                                 </li>
                                                 <li><a href="#">Страницы<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
@@ -376,7 +381,7 @@
                     <div class="col-lg-7">
                         <div class="admission_form">
                             <h3>Подать заявку на поступление</h3>
-                            <form  method="POST" class="was-validated">
+                            <form method="POST" class="was-validated">
                                 {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6">
@@ -589,7 +594,7 @@
         </div>
 
     </footer>
-    
+
     <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
     <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
@@ -615,9 +620,8 @@
     <script src="{% static 'js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'js/mail-script.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    
-{% block javascript %}
-{% endblock javascript %} 
+
+    {% block javascript %} {% endblock javascript %}
 </body>
 
 </html>
