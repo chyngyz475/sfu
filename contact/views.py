@@ -13,7 +13,6 @@ from django.views.generic.edit import CreateView, FormView
 
 from django.views.decorators.csrf  import csrf_exempt
 
-from django.shortcuts import redirect
 from django.views.generic.edit import CreateView
 
 from . import forms
@@ -28,14 +27,6 @@ class ContactCreateView(CreateView):
 def thanks(request):
     return render(request=request, template_name='thanks.html')
      
-
-def error_404_view(request, exception):
-    
-    # we add the path to the the 404.html file
-    # here. The name of our HTML file is 404.html
-    return render(request, '404.html')
-
-
 
 # def home(request: HttpRequest) -> HttpResponse:
     
