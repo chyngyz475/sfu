@@ -35,6 +35,9 @@ def application(request):
 def details(request):
     return render(request, "details.html",)
 
+def university_admission(request):
+    return render(request, "university_admission.html",)
+
 def details_post(request):
     return render(request=request, template_name='item/details_post.html')
 
