@@ -1586,14 +1586,18 @@ h3 {
 /* line 1, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
 
 .slider_bg_1 {
-    background-image: url('/static/img/banner/student.jpg');
+    background-image: url('/static/img/banner/2032jpg.jpg');
 }
 
 
 /* line 4, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
 
 .slider_bg_2 {
-    background-image: url('/static/img/banner/student.jpg');
+    background-image: url('/static/img/banner/sfu.jpg');
+}
+
+.slider_bg_3 {
+    background-image: url('/static/img/banner/sfu-kampus1.jpg');
 }
 
 
@@ -3128,6 +3132,10 @@ h3 {
 
 .breadcam_bg {
     background-image: url(../img/banner/bradcam.png);
+}
+
+.breadcam_bg_1 {
+    background-image: url(/static/img/banner/images.png);
 }
 
 
