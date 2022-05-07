@@ -5,38 +5,60 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'base.html')
+    return render(
+        request, 'base.html'
+        )
 
 def courses(request):
-    return render(request, 'courses.html')
+    return render(
+        request, 'courses.html'
+        )
 
 def bachelor(request):
-    return render(request, 'bachelor.html')
+    return render(
+        request, 'bachelor.html'
+        )
 
 def contact1(request):
-    return render(request, 'contact1.html')
+    return render(
+        request, 'contact1.html'
+        )
 
 def single(request):
-    return render(request, 'single.html')
+    return render(
+        request, 'single.html'
+        )
 
 def blog(request):
-    return render(request, 'blog.html')
+    return render(
+        request, 'blog.html'
+        )
 
 def blog(request):
-    return render(request, 'blog.html')
+    return render(
+        request, 'blog.html'
+        )
 
 def admissions(request):
     
-    return render(request, 'admissions.html')
+    return render(
+        request, 'admissions.html'
+        )
 
 def application(request):
-    return render(request, "aplication.html",)
+    return render(
+        request, "aplication.html",
+        )
 
 def details(request):
-    return render(request, "details.html",)
+    return render(
+        request, "details.html",
+        )
 
 def university_admission(request):
-    return render(request, "university_admission.html",)
+    return render(
+        request, "university_admission.html",
+        )
 
 def details_post(request):
     return render(request=request, template_name='item/details_post.html')

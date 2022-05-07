@@ -86,14 +86,6 @@ DATABASES = {
     }
 }
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'baybosunov0411@gmail.com'
-EMAIL_HOST_PASSWORD = 'xsyusp0411'
-EMAIL_USE_TLS = True
-
-RECAPTCHA_PUBLIC_KEY = '*Key here*'
-RECAPTCHA_PRIVATE_KEY = '*Key here*'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
