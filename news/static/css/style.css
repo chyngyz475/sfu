@@ -381,8 +381,7 @@ h3 {
 /* line 210, ../../Arafath/CL/january 2020/243.Education/HTML/scss/theme-default.scss */
 
 .section__padding {
-    padding-top: 75px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 
 @media (max-width: 767px) {
