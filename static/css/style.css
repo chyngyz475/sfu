@@ -3203,8 +3203,13 @@ h3 {
 /* line 39, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_bradcam.scss */
 
 .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 37px;
+    width: 60%;
+    padding-bottom: 142px;
+    margin-left: 327px;
+    text-align: center;
+    background: #E73E10;
+    border-radius: 20px;
 }
 
 
