@@ -1,4 +1,5 @@
 
+from hashlib import new
 from django.views.generic import ListView
 import pdb
 from django.shortcuts import render
@@ -68,3 +69,8 @@ def details_post2(request):
 
 def details_post3(request):
     return render(request=request, template_name='item/details_post.html')
+
+
+
+def news (request):
+    return render(request=request, template_name='news.html')

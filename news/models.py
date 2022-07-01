@@ -1,40 +1,63 @@
-import time
-from turtle import title
-from venv import create
+from audioop import reverse
 from django.db import models
-from django.urls import reverse
-from django.utils import timezone
-from django.contrib.auth.models import User
 from django.db import models
 
-class News(models.Model):
-    image = models.ImageField(upload_to='portfolio/images/', height_field=None , width_field=None)
-    title = models.CharField(max_length=100)
-    date  = models.DateField()
-    description = models.CharField(max_length=500)
-    text = models.TextField(max_length=150000)
-    
-    def __str__(self):
+# Create your models here.
+class Blog(models.Model):
+  url_height=models.PositiveIntegerField(
+      None
+      )
+  url_width=models.PositiveIntegerField(
+      None
+      )
+  title = models.CharField(
+      max_length=255,
+      verbose_name="Заголовок"
+      )
+  content = models.TextField(
+      blank=True,
+      verbose_name="Текст статьи"
+      )
+  photo = models.ImageField(
+      upload_to="photos/%Y/%m/%d/",
+      verbose_name="Фото"
+      )
+  time_create = models.DateTimeField(
+      auto_now_add=True,
+      verbose_name="Время создания"
+      )
+  time_update = models.DateTimeField(
+      auto_now=True,
+      verbose_name="Время изменения"
+      )
+  is_published = models.BooleanField(
+      default=True,
+      verbose_name="Публикация"
+      )
+  cat = models.ForeignKey(
+      'Category',
+      on_delete=models.PROTECT,
+      null=True,
+      verbose_name="Категории"
+      )
+  
+  def __str__(self):
         return self.title
 
+  def get_absolute_url(self):
+        return reverse('post', kwargs={'post_id': self.pk})
 
-class Tag(models.Model):
-    name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True, verbose_name="Категория")
 
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category', kwargs={'cat_id': self.pk})
 
-
-      
-class Comment(models.Model):
-       name = models.CharField(max_length=100)
-       direction = models.CharField(max_length=100)
-       email = models.CharField(max_length=150)
-       contact = models.CharField(max_length=150, blank=True, null=True )
-       message = models.TextField(max_length=500)
-       
-       def __str__(self):
-           return self.name
-
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+        ordering = ['id']
